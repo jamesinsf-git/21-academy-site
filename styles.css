@@ -125,23 +125,6 @@ a:hover { text-decoration: underline; }
   }
 }
 
-/* ---- The "21" ring mark (app icon) ---- */
-.mark {
-  display: block;
-  border-radius: 24%;
-  box-shadow:
-    0 10px 30px -8px rgba(0, 0, 0, 0.8),
-    0 0 0 1px var(--border-gold);
-}
-.mark.hero-mark {
-  width: 88px; height: 88px;
-  margin: 0 auto 2px;
-}
-.mark.footer-mark {
-  width: 54px; height: 54px;
-  margin: 0 auto 18px;
-}
-
 /* ---- Wordmark lockup: "Coach 21" ---- */
 .wordmark {
   font-family: var(--serif);
@@ -150,6 +133,15 @@ a:hover { text-decoration: underline; }
 }
 .wordmark .co { color: var(--text); }
 .wordmark .num { color: var(--gold); }
+
+/* The "21" rendered as the app-icon ring mark, sized to the wordmark letters.
+   Folds the brand mark into the name so we don't repeat "21" (icon + text). */
+.ring21 {
+  height: 1.4em;
+  width: auto;
+  vertical-align: -0.35em;
+  margin-left: 0.12em;
+}
 
 /* ---- Flourish divider ---- */
 .flourish {
@@ -259,8 +251,8 @@ a:hover { text-decoration: underline; }
 .h1-wordmark {
   font-family: var(--serif);
   font-weight: 600;
-  font-size: 62px;
-  line-height: 1.04;
+  font-size: 50px;
+  line-height: 1.1;
   letter-spacing: 0.005em;
   margin: 10px 0 14px;
 }
@@ -685,8 +677,7 @@ details.faq .a li { margin: 4px 0; }
   .section.hero { padding: 52px 48px 66px; }
   .section.cta-band { padding: 60px 48px; }
 
-  .mark.hero-mark { width: 104px; height: 104px; }
-  .h1-wordmark { font-size: 92px; }
+  .h1-wordmark { font-size: 76px; }
   .h2 { font-size: 40px; }
   .h2.small { font-size: 34px; }
   .h1-doc { font-size: 56px; }
@@ -703,8 +694,6 @@ details.faq .a li { margin: 4px 0; }
     text-align: left;
   }
   .section.hero .hero-inner > .eyebrow,
-  .section.hero .hero-inner > .mark,
-  .section.hero .hero-inner > .flourish,
   .section.hero .hero-inner > .h1-wordmark,
   .section.hero .hero-inner > .subhead,
   .section.hero .hero-inner > .tagline,
@@ -712,12 +701,10 @@ details.faq .a li { margin: 4px 0; }
     grid-column: 1;
     justify-self: start;
   }
-  .section.hero .hero-inner > .mark { margin-left: 0; }
-  .section.hero .hero-inner > .flourish { margin-left: 0; }
   .section.hero .hero-inner > .tagline { margin-left: 0; }
   .section.hero .hero-inner > .phone {
     grid-column: 2;
-    grid-row: 1 / span 6;
+    grid-row: 1 / span 5;
     margin: 0;
     justify-self: center;
   }
@@ -755,8 +742,7 @@ details.faq .a li { margin: 4px 0; }
   .section.hero { padding: 72px 72px 84px; }
   .section.cta-band { padding: 76px 72px; }
 
-  .mark.hero-mark { width: 116px; height: 116px; }
-  .h1-wordmark { font-size: 116px; }
+  .h1-wordmark { font-size: 96px; }
   .h2 { font-size: 46px; }
   .h2.small { font-size: 40px; }
   .h1-doc { font-size: 70px; }
