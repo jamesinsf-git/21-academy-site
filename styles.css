@@ -685,12 +685,15 @@ details.faq .a li { margin: 4px 0; }
   .tagline, .sub { max-width: 460px; font-size: 16px; }
   .feature-body { font-size: 15px; }
 
-  /* Hero: text + phone side-by-side */
+  /* Hero: text + phone side-by-side. The phone is taller than the text
+     column, so centering it makes its (tilted, floating) top ride up into
+     the header — push the whole grid down to keep clear of the nav. */
   .section.hero .hero-inner {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
     gap: 44px;
+    margin-top: 44px;
     text-align: left;
   }
   .section.hero .hero-inner > .eyebrow,
