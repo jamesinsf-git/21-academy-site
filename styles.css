@@ -343,7 +343,6 @@ a:hover { text-decoration: underline; }
   margin: 32px auto 0;
   width: 100%;
   max-width: 268px;
-  aspect-ratio: 9 / 19.5;
   border-radius: 38px;
   padding: 5px;
   background: linear-gradient(150deg, #d8c48c 0%, #8a7233 34%, #f0e2b0 60%, #7a6425 100%);
@@ -355,12 +354,15 @@ a:hover { text-decoration: underline; }
 .phone.float { animation: floatY 6s ease-in-out infinite; transform: rotate(-2.5deg); }
 .phone .screen {
   position: relative;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 0;
+  /* Aspect ratio via padding (WebKit-safe): 9:19.5 portrait frame. */
+  padding-bottom: 216.67%;
   border-radius: 33px;
   overflow: hidden;
   background: var(--bg);
 }
-.phone .screen img { width: 100%; height: 100%; object-fit: cover; }
+.phone .screen img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .phone .island {
   position: absolute;
   left: 50%; top: 9px;
