@@ -1,4 +1,4 @@
-/* Coach 21 — runtime wiring.
+/* Coach 21: runtime wiring.
    - Assembles the contact email so Cloudflare Email Obfuscation
      can't rewrite a literal mailto: into a /cdn-cgi/l/email-protection link.
    - Wires App Store badges to the live listing.
